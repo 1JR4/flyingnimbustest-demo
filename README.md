@@ -7,16 +7,27 @@ This project prioritizes working code over perfect architecture. We follow the *
 
 ## 🤖 AI Agent Ecosystem
 
-This project uses 8 specialized AI agents for seamless webapp and mobile development:
+This project uses 8 specialized Claude Code agents for seamless webapp and mobile development:
 
-1. **Backend API Agent** 🔧 - Server logic, APIs, database operations
-2. **Frontend Web Agent** 💻 - React/Vue/Svelte web applications  
-3. **Mobile Agent** 📱 - React Native/Flutter mobile apps
-4. **Database Agent** 🗄️ - Schema, migrations, query optimization
-5. **DevOps Agent** ⚙️ - CI/CD, infrastructure, monitoring
-6. **Testing Agent** 🧪 - Comprehensive testing strategy
-7. **Security Agent** 🔒 - Security auditing and compliance
-8. **UI/UX Agent** 🎨 - Design systems and user experience
+1. **orchestrator** 🎯 - Multi-agent coordinator and task manager
+2. **backend-api** 🔧 - Server logic, APIs, database operations
+3. **frontend-web** 💻 - React/Vue/Svelte web applications  
+4. **mobile-developer** 📱 - React Native/Flutter mobile apps
+5. **database-manager** 🗄️ - Schema, migrations, query optimization
+6. **devops-engineer** ⚙️ - CI/CD, infrastructure, monitoring
+7. **testing-specialist** 🧪 - Comprehensive testing strategy
+8. **security-auditor** 🔒 - Security auditing and compliance
+
+### Agent Usage
+```bash
+# Simple tasks - use specialized agents directly
+> Use the backend-api subagent to add user profile endpoints
+> Use the frontend-web subagent to create a responsive navigation
+
+# Complex tasks - use orchestrator for coordination  
+> Use the orchestrator subagent to implement user authentication system
+> Use the orchestrator subagent to optimize application performance
+```
 
 ## 📁 Project Structure
 
