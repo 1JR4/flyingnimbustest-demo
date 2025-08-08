@@ -88,11 +88,13 @@ npm run deploy:production
 
 ### Technology Stack
 - **Backend**: Node.js, TypeScript, GraphQL
-- **Web**: React (configurable)
+- **Web**: Hotwire (Turbo + Stimulus) with Tailwind CSS
 - **Mobile**: React Native (planned)
 - **Database**: Firebase (abstracted via interfaces)
 - **Hosting**: Firebase Hosting
 - **CI/CD**: GitHub Actions
+- **Testing**: BDD-first with Cucumber + Playwright
+- **Development**: Git Worktrees for parallel feature development
 
 ## 📋 Agent Communication
 
@@ -131,11 +133,54 @@ This project is designed for AI agent collaboration. Each agent should:
 3. Follow domain boundaries and handoff procedures
 4. Document decisions and provide context for next agent
 
+## 🔧 Modern Development Workflow
+
+### Available Scripts
+```bash
+# Development
+npm run dev              # Start development server
+npm test                 # Run BDD tests (primary)
+npm run test:unit        # Run unit tests  
+npm run build           # Build for production
+
+# Feature Development (Korean methodology)
+npm run backup           # Create feature backup ("원큐엔 절대 안됩니다")
+npm run worktree:setup   # Setup parallel worktrees
+npm run worktree:status  # Check worktree status
+
+# Code Quality
+npm run lint            # Lint code
+npm run format          # Format code
+npm run type-check      # TypeScript check
+
+# Deployment
+npm run deploy:staging  # Deploy to staging
+npm run deploy:prod     # Deploy to production
+```
+
+### Hotwire Modern UI
+- **Minimal JavaScript**: Server-side rendering with Turbo
+- **Import Maps**: No build step required
+- **Stimulus Controllers**: Progressive enhancement
+- **Tailwind CSS**: shadcn-style utility classes
+
+### BDD Testing Strategy
+- **Gherkin Scenarios**: Natural language test specifications
+- **Playwright Integration**: Real browser testing
+- **Behavior Focus**: Test what users care about, not implementation
+
+### Git Worktree Parallel Development
+- **Multiple Features**: Work on different features simultaneously
+- **No Branch Switching**: Each worktree maintains its state
+- **AI Agent Friendly**: Run multiple Claude sessions in parallel
+
 ## 📚 Documentation
 
 - **Development Standards**: `.claude/CLAUDE.md`
-- **API Documentation**: `docs/API.md` (when created)
-- **Architecture Decisions**: `docs/ARCHITECTURE.md` (when created)
+- **Modern UI Guide**: `HOTWIRE_GUIDE.md`
+- **Parallel Development**: `GIT_WORKTREE_GUIDE.md`
+- **Feature Backup Strategy**: `FEATURE_BACKUP_BDD_GUIDE.md`
+- **Agent Documentation**: `.claude/agents/README.md`
 
 ## 🔄 Project Status
 

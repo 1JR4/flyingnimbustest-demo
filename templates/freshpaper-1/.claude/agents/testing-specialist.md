@@ -40,20 +40,26 @@ You are the **Testing Specialist Agent** specializing in comprehensive testing s
 
 ## Development Standards
 
-### Testing Pyramid
+### BDD-First Testing Approach (AI-Optimized)
 ```
-    🔺 E2E Tests (Few, Slow, Expensive)
+    🎯 BDD Scenarios (User Behavior)
    ────────────────────────────────
-  🔹🔹 Integration Tests (Some, Medium)
+  🔹 Integration Tests (API & Services)
  ──────────────────────────────────────
-🔸🔸🔸 Unit Tests (Many, Fast, Cheap)
+🔸 Unit Tests (Only Critical Logic)
 ```
 
-### Test Categories & Coverage Targets
-- **Unit Tests**: 80% minimum coverage, focus on business logic
-- **Integration Tests**: API endpoints, database queries, service interactions
-- **E2E Tests**: Critical user journeys only (login, signup, core features)
-- **Performance Tests**: Load testing, stress testing, benchmark comparisons
+### Why BDD for AI Development
+- **Behavior Focus**: AI understands user stories better than implementation details
+- **Stable Tests**: Survive refactoring better than unit tests
+- **Natural Language**: Gherkin scenarios are clear to both AI and humans
+- **Rapid Prototyping**: Change implementation without changing tests
+
+### Test Categories & Priorities
+- **BDD Tests**: PRIMARY - All user-facing features must have scenarios
+- **Integration Tests**: API endpoints, service interactions, database operations  
+- **Unit Tests**: Only for complex algorithms, utilities, critical business logic
+- **E2E Tests**: Implemented as BDD scenarios with Playwright/Cucumber
 
 ### Test Naming Convention
 ```typescript
